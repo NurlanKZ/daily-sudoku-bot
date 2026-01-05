@@ -30,14 +30,18 @@ def crop_sudoku_image():
     cropped_img.save("output.png")
 
 async def send_daily_message(app):
-    await app.bot.send_photo(chat_id=CHANNEL_ID, photo=open('output.png', 'rb'))
+    crop_sudoku_image()
+    
+    # Use context manager to properly close the file
+    with open('output.png', 'rb') as photo:
+        await app.bot.send_photo(chat_id=CHANNEL_ID, photo=photo)
 
 async def run_app():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
 
     # Start the application (polling won't be strictly necessary if only scheduling)
     await app.initialize()
-    
+
     # Send the message WITHOUT starting the polling
     await send_daily_message(app)
     
