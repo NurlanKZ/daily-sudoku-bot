@@ -2,35 +2,31 @@ import os
 import asyncio
 from telegram.ext import ApplicationBuilder
 from PIL import Image
-from playwright.sync_api import sync_playwright
+from playwright.async_api import async_playwright
 
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
 CHANNEL_ID = os.environ.get('CHANNEL_ID')
 
-def take_screenshot(url, output_file="input.png"):
-    with sync_playwright() as p:
-        browser = p.chromium.launch(
+async def take_screenshot(url, output_file="input.png"):
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(
             headless=True,
             args=["--disable-dev-shm-usage"]
         )
-        page = browser.new_page()
-        page.goto(url, wait_until="networkidle")
+        page = await browser.new_page()
+        await page.goto(url, wait_until="networkidle")
+        await page.screenshot(path=output_file, full_page=True)
+        await browser.close()
 
-        page.screenshot(path=output_file, full_page=True)
-        
-        browser.close()
-
-def prep_sudoku_image():
-    take_screenshot("https://www.websudoku.com/?level=4")
-
-    img = Image.open("input.png")
-    cropped_img = img.crop((578, 152, 578+432, 152+470))  # Define the crop box (left, upper, right, lower)
+async def prep_sudoku_image():
+    await take_screenshot("https://www.websudoku.com/?level=4")
     
-    # Save the cropped image
+    img = Image.open("input.png")
+    cropped_img = img.crop((578, 152, 578+432, 152+470))
     cropped_img.save("output.png")
 
 async def send_daily_message(app):
-    prep_sudoku_image()
+    await prep_sudoku_image()
 
     # Use context manager to properly close the file
     with open('output.png', 'rb') as photo:
