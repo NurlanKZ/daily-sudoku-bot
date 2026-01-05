@@ -37,11 +37,12 @@ async def run_app():
 
     # Start the application (polling won't be strictly necessary if only scheduling)
     await app.initialize()
-    await app.start()
     
-    await send_daily_message(app)  # Await the async function
-
-    await app.stop()
+    # Send the message WITHOUT starting the polling
+    await send_daily_message(app)
+    
+    # Shutdown
+    await app.shutdown()
 
 if __name__ == '__main__':
     asyncio.run(run_app())  # Use asyncio.run() to run the async function
