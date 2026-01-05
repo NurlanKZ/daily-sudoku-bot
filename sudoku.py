@@ -20,7 +20,7 @@ def take_screenshot(url, output_file="input.png"):
         
         browser.close()
 
-def crop_sudoku_image():
+def prep_sudoku_image():
     take_screenshot("https://www.websudoku.com/?level=4")
 
     img = Image.open("input.png")
@@ -30,8 +30,8 @@ def crop_sudoku_image():
     cropped_img.save("output.png")
 
 async def send_daily_message(app):
-    crop_sudoku_image()
-    
+    prep_sudoku_image()
+
     # Use context manager to properly close the file
     with open('output.png', 'rb') as photo:
         await app.bot.send_photo(chat_id=CHANNEL_ID, photo=photo)
