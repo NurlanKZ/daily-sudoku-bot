@@ -14,7 +14,13 @@ async def take_screenshot(url, output_file="input.png"):
             args=["--disable-dev-shm-usage"]
         )
         page = await browser.new_page()
-        await page.goto(url, wait_until="networkidle")
+
+        # Use 'domcontentloaded' instead of 'networkidle' - faster and more reliable
+        await page.goto(url, wait_until="domcontentloaded", timeout=20000)
+        
+        # Wait a bit for dynamic content
+        await asyncio.sleep(2)
+
         await page.screenshot(path=output_file, full_page=True)
         await browser.close()
 
