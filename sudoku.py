@@ -85,7 +85,7 @@ async def send_daily_message(app):
 
     difficulty_info = big_texts[1].get_text(strip=True)
 
-    message_content = format_sudoku_html(
+    message_content = await format_sudoku_html(
         string81,
         level=difficulty_info[-11:-10]
     )
