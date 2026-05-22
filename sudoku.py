@@ -58,7 +58,7 @@ async def format_sudoku_html(puzzle: str, level: str = "Unknown") -> str:
 
     return (
         f"<b>🧩 Sudoku</b>\n"
-        f"<b>Difficulty:</b> {level}\n\n"
+        f"<b>Difficulty: {level}</b> \n\n"
         f"<pre>{board}</pre>"
     )
 
@@ -93,7 +93,7 @@ async def send_daily_message(app):
     await app.bot.send_message(
         chat_id=CHANNEL_ID,
         text=message_content,
-        parse_mode="Markdown"
+        parse_mode="HTML"
     )
 
 async def run_app():
