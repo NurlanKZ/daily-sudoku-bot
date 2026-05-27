@@ -16,26 +16,13 @@ headers = {
 }
 
 async def get_puzzle_string(url):
-    async with aiohttp.ClientSession(headers=headers) as session:
+    async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
-            html = await response.text()
+            final_url = str(response.url)
 
-    soup = BeautifulSoup(html, "html.parser")
+            puzzle = final_url.rstrip("/").split("/")[-1]
 
-    inputs = soup.select("#puzzle_grid input")
-
-    # Ensure we always produce 81 characters
-    values = []
-    for inp in inputs:
-        val = inp.get("value")
-        values.append(val if val and val.isdigit() else "0")
-
-    string81 = "".join(values)
-
-    if len(string81) != 81:
-        raise ValueError(f"Expected 81 cells, got {len(string81)}")
-
-    return string81
+    return puzzle
 
 async def format_sudoku_html(puzzle: str, level: str = "Unknown") -> str:
     lines = []
@@ -58,12 +45,12 @@ async def format_sudoku_html(puzzle: str, level: str = "Unknown") -> str:
 
     return (
         f"<b>🧩 Sudoku</b>\n"
-        f"<b>Difficulty: {level}</b> \n\n"
+        f"Difficulty: {level}\n\n"
         f"<pre>{board}</pre>"
     )
 
 async def send_daily_message(app):
-    string81 = await get_puzzle_string("https://west.websudoku.com/?level=4")
+    string81 = await get_puzzle_string("https://sudoku.coach/en/play/hard")
 
     url = f"https://www.thonky.com/sudoku/evaluate-sudoku?puzzlebox={string81}"
 
