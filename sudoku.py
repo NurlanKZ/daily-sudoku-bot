@@ -18,7 +18,9 @@ headers = {
 async def get_puzzle_string(url):
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
-            puzzle = response.json()[0]['puzzle']
+            data = await response.json()
+            puzzle = data[0]["puzzle"]
+            return puzzle
 
     return puzzle
 
