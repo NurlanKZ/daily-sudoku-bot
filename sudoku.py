@@ -18,9 +18,7 @@ headers = {
 async def get_puzzle_string(url):
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
-            final_url = str(response.url)
-
-            puzzle = final_url.rstrip("/").split("/")[-1]
+            puzzle = response.json()[0]['puzzle']
 
     return puzzle
 
@@ -50,7 +48,7 @@ async def format_sudoku_html(puzzle: str, level: str = "Unknown") -> str:
     )
 
 async def send_daily_message(app):
-    string81 = await get_puzzle_string("https://sudoku.coach/en/play/hard")
+    string81 = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/1")
 
     url = f"https://www.thonky.com/sudoku/evaluate-sudoku?puzzlebox={string81}"
 
