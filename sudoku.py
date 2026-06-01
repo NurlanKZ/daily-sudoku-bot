@@ -16,13 +16,33 @@ headers = {
 }
 
 async def get_puzzle_string(url):
+    data = []
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             data = await response.json()
-            puzzle = data[0]["puzzle"]
-            return puzzle
 
-    return puzzle
+    return data
+
+async def get_sudoku_level(string81):
+    url = f"https://www.thonky.com/sudoku/evaluate-sudoku?puzzlebox={string81}"
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, headers=headers) as resp:
+            html = await resp.text()
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    card = soup.find("div", class_="card text-bg-success p-3")
+    if not card:
+        return None
+
+    big_texts = card.find_all("big")
+    if len(big_texts) < 2:
+        return None
+
+    difficulty_info = big_texts[1].get_text(strip=True)
+
+    return int(difficulty_info[-11:-10])
 
 async def format_sudoku_html(puzzle: str, level: str = "Unknown") -> str:
     lines = []
@@ -50,36 +70,22 @@ async def format_sudoku_html(puzzle: str, level: str = "Unknown") -> str:
     )
 
 async def send_daily_message(app):
-    string81 = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/1")
+    saved_message = None
+    puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/36")
 
-    url = f"https://www.thonky.com/sudoku/evaluate-sudoku?puzzlebox={string81}"
+    for string81 in puzzles:
+        level = await get_sudoku_level(string81)
+        if level is None:
+            continue
 
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url, headers=headers) as resp:
-            html = await resp.text()
+        saved_message = await format_sudoku_html(string81, level)
 
-    soup = BeautifulSoup(html, "html.parser")
-
-    # Find the target div
-    card = soup.find("div", class_="card text-bg-success p-3")
-    if not card:
-        raise ValueError("Sudoku evaluation card not found")
-
-    big_texts = card.find_all("big")
-
-    if len(big_texts) < 2:
-        raise ValueError("Unexpected HTML structure: missing difficulty info")
-
-    difficulty_info = big_texts[1].get_text(strip=True)
-
-    message_content = await format_sudoku_html(
-        string81,
-        level=difficulty_info[-11:-10]
-    )
+        if level > 3: # found a puzzle with difficulty greater than 3, use it and stop looking
+            break
 
     await app.bot.send_message(
         chat_id=CHANNEL_ID,
-        text=message_content,
+        text=saved_message,
         parse_mode="HTML"
     )
 
