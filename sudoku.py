@@ -78,7 +78,7 @@ async def send_daily_message(app):
         if level is None:
             continue
 
-        saved_message = await format_sudoku_html(string81, level)
+        saved_message = await format_sudoku_html(string81['puzzle'], level)
 
         if level > 3: # found a puzzle with difficulty greater than 3, use it and stop looking
             break
