@@ -74,7 +74,7 @@ async def send_daily_message(app):
     puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/36")
 
     for string81 in puzzles:
-        level = await get_sudoku_level(string81)
+        level = await get_sudoku_level(string81['puzzle'])
         if level is None:
             continue
 
