@@ -76,21 +76,22 @@ async def send_daily_message(app):
 
     for item in puzzles:
         level = await get_sudoku_level(item['puzzle'])
+
         if level >= 4:
             link = f"https://hardsudoku.web.app/?p={item['puzzle']}&lvl={level}"
             # Telegram spoiler format: ||text||
             text = f"🧩 Sudoku #{i}\n<tg-spoiler><a href='{link}'>Open puzzle</a></tg-spoiler>"
             i += 1
 
-        await app.bot.send_message(
-            chat_id=CHANNEL_ID,
-            text=text,
-            parse_mode="HTML",
-            disable_web_page_preview=True
-        )
+            await app.bot.send_message(
+                chat_id=CHANNEL_ID,
+                text=text,
+                parse_mode="HTML",
+                disable_web_page_preview=True
+            )
 
-        if i > 3:  # Limit to 3 puzzles
-            break
+            if i > 3:  # Limit to 3 puzzles
+                break
 
 async def run_app():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
