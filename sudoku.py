@@ -71,7 +71,7 @@ async def format_sudoku_html(puzzle: str, level: str = "Unknown") -> str:
 
 async def send_daily_message(app):
     message_lines = []
-    puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/10")
+    puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/16")
 
     for item in puzzles:
         level = await get_sudoku_level(item['puzzle'])
@@ -80,9 +80,13 @@ async def send_daily_message(app):
             # Telegram spoiler format: ||text||
             message_lines.append(f"||{link}||")
 
+    telegram_message = "\n\n".join(message_lines)
+    message = "🧩 Sudoku\n\n" + telegram_message
+
     await app.bot.send_message(
         chat_id=CHANNEL_ID,
-        text="\n\n".join(message_lines)
+        text=message,
+        parse_mode="MarkdownV2"
     )
 
 async def run_app():
