@@ -71,7 +71,7 @@ async def format_sudoku_html(puzzle: str, level: str = "Unknown") -> str:
 
 async def send_daily_message(app):
     message_lines = []
-    puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/16")
+    puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/12")
     i = 1
 
     for item in puzzles:
@@ -79,15 +79,18 @@ async def send_daily_message(app):
         if level >= 4:
             link = f"https://hardsudoku.web.app/?p={item['puzzle']}&lvl={level}"
             # Telegram spoiler format: ||text||
-            message_lines.append(f'<tg-spoiler><a href="{link}">Sudoku #{i}</a></tg-spoiler>')
+            text = f"🧩 Sudoku #{i}\n<tg-spoiler><a href='{link}'>Open puzzle</a></tg-spoiler>"
             i += 1
 
-    await app.bot.send_message(
-        chat_id=CHANNEL_ID,
-        text="\n\n".join(message_lines),
-        parse_mode="HTML",
-        disable_web_page_preview=True
-    )
+        await app.bot.send_message(
+            chat_id=CHANNEL_ID,
+            text=text,
+            parse_mode="HTML",
+            disable_web_page_preview=True
+        )
+
+        if i > 3:  # Limit to 3 puzzles
+            break
 
 async def run_app():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
