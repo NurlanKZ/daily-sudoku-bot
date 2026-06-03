@@ -70,23 +70,19 @@ async def format_sudoku_html(puzzle: str, level: str = "Unknown") -> str:
     )
 
 async def send_daily_message(app):
-    saved_message = None
-    puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/36")
+    message_lines = []
+    puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/10")
 
-    for string81 in puzzles:
-        level = await get_sudoku_level(string81['puzzle'])
-        if level is None:
-            continue
-
-        saved_message = await format_sudoku_html(string81['puzzle'], level)
-
-        if level > 3: # found a puzzle with difficulty greater than 3, use it and stop looking
-            break
+    for item in puzzles:
+        level = await get_sudoku_level(item['puzzle'])
+        if level >= 4:
+            link = f"https://hardsudoku.web.app/?p={item['puzzle']}&lvl={level}"
+            # Telegram spoiler format: ||text||
+            message_lines.append(f"||{link}||")
 
     await app.bot.send_message(
         chat_id=CHANNEL_ID,
-        text=saved_message,
-        parse_mode="HTML"
+        text="\n\n".join(message_lines)
     )
 
 async def run_app():
