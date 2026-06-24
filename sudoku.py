@@ -53,6 +53,12 @@ async def get_sudoku_level(puzzle_string):
         async with session.post(url, params=params, json=payload, headers=headers) as r:
             data = await r.json()
 
+            # Debug output (IMPORTANT)
+            print("API response:", data)
+
+            if "se_rating" not in data:
+                return None  # or handle differently
+
             return str(data["se_rating"])[0]
 
 
