@@ -63,7 +63,7 @@ async def get_sudoku_level(puzzle_string):
 
 
 async def send_daily_message(app):
-    puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/3")
+    puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/1")
 
     for item in puzzles:
         level = await get_sudoku_level(item['puzzle'])
