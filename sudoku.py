@@ -1,19 +1,11 @@
 import os
 import asyncio
 import aiohttp
-from bs4 import BeautifulSoup
+from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import ApplicationBuilder
 
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
 CHANNEL_ID = os.environ.get('CHANNEL_ID')
-
-headers = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/91.0.4472.124 Safari/537.36"
-    )
-}
 
 async def get_puzzle_string(url):
     data = []
@@ -23,75 +15,64 @@ async def get_puzzle_string(url):
 
     return data
 
-async def get_sudoku_level(string81):
-    url = f"https://www.thonky.com/sudoku/evaluate-sudoku?puzzlebox={string81}"
+def string_to_grid(s: str):
+    """
+    Convert an 81-character string into a 9x9 grid (list of lists).
+    Assumes row-major order.
+    """
+    if len(s) != 81:
+        raise ValueError("Input string must be exactly 81 characters long.")
+
+    # Optional: validate characters
+    if not all(c.isdigit() for c in s):
+        raise ValueError("Input must contain only digits 0-9.")
+
+    grid = []
+    for i in range(0, 81, 9):
+        row = [int(ch) for ch in s[i:i+9]]
+        grid.append(row)
+
+    return grid
+
+async def get_sudoku_level(puzzle_string):
+    url = "https://ozerlyn.com/api/backend-proxy"
+    params = {
+        "endpoint": "/api/sudoku/calculate-se-rating"
+    }
+
+    headers = {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+    }
+
+    payload = {
+        "grid": string_to_grid(puzzle_string)
+    }
 
     async with aiohttp.ClientSession() as session:
-        async with session.get(url, headers=headers) as resp:
-            html = await resp.text()
+        async with session.post(url, params=params, json=payload, headers=headers) as r:
+            data = await r.json()
 
-    soup = BeautifulSoup(html, "html.parser")
+            return str(data["se_rating"])[0]
 
-    card = soup.find("div", class_="card text-bg-success p-3")
-    if not card:
-        return None
-
-    big_texts = card.find_all("big")
-    if len(big_texts) < 2:
-        return None
-
-    difficulty_info = big_texts[1].get_text(strip=True)
-
-    return int(difficulty_info[-11:-10])
-
-async def format_sudoku_html(puzzle: str, level: str = "Unknown") -> str:
-    lines = []
-
-    for r in range(9):
-        row = []
-        for c in range(9):
-            val = puzzle[r * 9 + c]
-            row.append(val if val != "0" else " ")
-
-            if c in (2, 5):
-                row.append("|")
-
-        lines.append(" ".join(row))
-
-        if r in (2, 5):
-            lines.append("-" * 21)
-
-    board = "\n".join(lines)
-
-    return (
-        f"<b>🧩 Sudoku</b>\n"
-        f"Difficulty: {level}\n\n"
-        f"<pre>{board}</pre>"
-    )
 
 async def send_daily_message(app):
-    message_lines = []
-    puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/12")
-    i = 1
+    puzzles = await get_puzzle_string("https://sudoku.coach/beapi/get-puzzles/quick_puzzle_sudoku/5/3")
 
     for item in puzzles:
         level = await get_sudoku_level(item['puzzle'])
 
-        if level >= 4:
-            link = f"https://hardsudoku.web.app/?p={item['puzzle']}&lvl={level}"
-            # Telegram spoiler format: ||text||
-            text = f"🧩 Sudoku #{i}\n<tg-spoiler><a href='{link}'>Open puzzle</a></tg-spoiler>"
-            i += 1
+        if level == "3":
+            link = f"https://sudoku.coach/en/solver/{item['puzzle']}"
+            keyboard = InlineKeyboardMarkup([
+                [InlineKeyboardButton("🧩 Open puzzle", url=link)]
+            ])
 
             await app.bot.send_message(
                 chat_id=CHANNEL_ID,
-                text=text,
-                parse_mode="HTML",
-                disable_web_page_preview=True
+                text="Solve this puzzle:",
+                reply_markup=keyboard,
             )
-
-            if i > 3:  # Limit to 3 puzzles
-                break
 
 async def run_app():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
