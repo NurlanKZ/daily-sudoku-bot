@@ -1,3 +1,4 @@
 scripting.py
 output.txt
 hosted/
+__pycache__/
