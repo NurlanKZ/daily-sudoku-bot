@@ -97,7 +97,8 @@ def extract_sudoku(html: str) -> str:
 
 async def send_daily_message(app):
     set_id = random.randint(4_025_000_000, 4_051_000_000)
-    string81 = extract_sudoku(fetch_puzzle(set_id))
+    html = await fetch_puzzle(set_id)
+    string81 = extract_sudoku(html)
 
     link = f"https://sudoku.coach/en/solver/{string81}"
     keyboard = InlineKeyboardMarkup([
