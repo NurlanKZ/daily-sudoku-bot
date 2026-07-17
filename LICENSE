@@ -1,21 +1,218 @@
-MIT License
+<HTML>
+        <HEAD>
+                <TITLE>Web Sudoku - Billions of Free Sudoku Puzzles to Play Online</TITLE>
+                <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+        <meta id = "mobileviewport" name="viewport" content="width=device-width, initial-scale=1">
+                <LINK REL="stylesheet" TYPE="text/css" HREF="style29.css">
 
-Copyright (c) 2026 Nurlan Kudaibergen
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+                <SCRIPT language="JavaScript"><!--
+                        var w_c=1;
+                        var w_s=0;
+                        var e_m=0;
+                        var m_c='<FONT COLOR=green><B>Back to the start, we go!</B></FONT>';
+                        var m_m='<FONT COLOR=red><B>You made some mistakes, highlighted in red!</B></FONT>';
+                        var m_w='<FONT COLOR=purple><B>Something is not quite right in * of the cells!</B></FONT>';
+                        var m_i='<FONT COLOR=blue><B>Everything is OK, still * to go!</B></FONT>';
+                        var m_d='<B>Here is the puzzle. Good luck!</B>';
+                        var s_c=false;
+                        var cheat='965278134172934658384561729749315286213689547856742391598127463621493875437856912';
+                        var prefix='amy2z';
+                        var pid='3333333333';
+                // --></SCRIPT>
+                <SCRIPT TYPE="text/javascript" SRC="index31.js"></SCRIPT>
+                <SCRIPT TYPE="text/javascript" SRC="index_sidekeys.js?c"></SCRIPT>
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+<!-- OneTrust Cookies Consent Notice start -->
+
+<script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="9729622b-0f2e-4ae7-bce8-cac19b6e3aac"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end -->
+
+
+                                <!-- The HTML code and text in this document are copyright. Infringers of copyright will be prosecuted. -->
+        </HEAD>
+
+        <BODY BGCOLOR="#F9F9FF" onLoad="j3(-1); side_init();">
+        <TABLE WIDTH="100%" HEIGHT="100%" CELLSPACING="0" BORDER="0"><TR>       <TD ID="left-column" CLASS="left-bordered">
+                        <TABLE WIDTH="100%" HEIGHT="100%" CELLSPACING="0" BORDER="0">
+                                <TR><TD VALIGN="top" ALIGN="center">
+                                        <SCRIPT language="JavaScript"><!--
+                                                j0();
+                                        // --></SCRIPT>
+<P CLASS="small" STYLE="margin:0;"><B>English</B> &nbsp; <A HREF="http://fr.websudoku.com/" TARGET="_top" TITLE="Web Sudoku - Des Milliards de Sudokus Gratuits pour Jouer en Ligne">Français</A> &nbsp; <A HREF="http://de.websudoku.com/" TARGET="_top" TITLE="Web Sudoku - Milliarden Kostenlose Online-Sudokus">Deutsch</A> &nbsp; <A HREF="http://es.websudoku.com/" TARGET="_top" TITLE="Web Sudoku - Billones de rompecabezas sudoku gratis a los que jugar en Línea">Español</A> </P>                                 <DIV ID="logo"><IMG SRC="logo-120x120.png" SRCSET="logo-120x120.png 1x,logo-240x240.png 2x" WIDTH="120" HEIGHT="120" BORDER="0"></DIV>
+                                        <P CLASS="tm big"><A HREF="//www.websudoku.com/?level=1" TARGET="_top"><B>Easy</B></A> &nbsp; <A HREF="//www.websudoku.com/?level=2" TARGET="_top"><B>Medium</B></A> &nbsp; <A HREF="//www.websudoku.com/?level=3" TARGET="_top"><B>Hard</B></A> &nbsp; <B>Evil</B> </P>
+                                        <DIV CLASS="blurb halfbig">
+                                                To complete the Sudoku puzzle, enter numbers into the spaces so that each row, column and 3&times;3 box contains the digits 1&nbsp;to&nbsp;9 without repeats.
+                                        </DIV>
+                                        <!--<P CLASS="tm halfbig" STYLE="white-space:nowrap;">-->
+                                                <!--<a href="https://play.google.com/store/apps/details?id=com.websudoku.app&referrer=utm_source%3Dwebsudoku%26utm_medium%3Dreferral%26utm_campaign%3Dleft_button" target="_top"><IMG SRC="get-it-google-play-2.png" TITLE="Web Sudoku app for Android" WIDTH="141" HEIGHT="42" BORDER="0"></a>-->
+                                                <!--<a href="https://itunes.apple.com/us/app/web-sudoku/id786161944?mt=8&uo=4&at=11l558" target="_top"><IMG SRC="download-app-store-2.png" TITLE="Web Sudoku app for iPad" HEIGHT="42" BORDER="0"></a>-->
+                                        <!--</P>-->
+                                        <DIV CLASS="blurb halfbig" STYLE="margin-bottom:0;">
+                                                <B>Some tips for solving Sudoku:</B>
+                                                <UL>
+                                                        <LI>Avoid trial and error &ndash; find a logical reason for entering each number.</LI>
+                                                        <LI>Look for rows, columns and 3&times;3 boxes with just a few blanks remaining.</LI>
+                                                        <LI>Try adding numbers which already appear often in the Sudoku puzzle.</LI>
+                                                        <LI>After entering a number, check to see where else it has to go.</LI>
+                                                        <LI>For trickier puzzles, click Options to turn on pencil marks.</LI>
+                                                </UL>
+                                        </DIV>
+                                        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1165533-17', 'auto');
+  ga('send', 'pageview');
+
+</script>                               </TD></TR>
+                                <TR><TD VALIGN=bottom NOWRAP ALIGN=center>
+                                        <P CLASS="tm"><A HREF="//www.websudoku.com/about.php" TARGET="_top" TITLE="More information about Web Sudoku">About</A> | <A HREF="//www.websudoku.com/faqs.php" TARGET="_top" TITLE="Frequently Asked Questions">FAQs</A> | <A HREF="//www.websudoku.com/syndication.php" TARGET="_top" TITLE="Sudoku puzzle syndication">Syndication</A> | <A HREF="//www.websudoku.com/privacy.php" TARGET="_top" TITLE="Our full privacy statement">Privacy</A> | <A HREF="//www.websudoku.com/feedback.php" TARGET="_top" TITLE="Send feedback to Web Sudoku">Feedback</A></P>
+                                </TD></TR>
+                        </TABLE>
+                </TD>
+
+                <TD ID="right-column" BGCOLOR="#F9F9FF" ><TABLE WIDTH="100%" HEIGHT="100%" CELLSPACING="0">
+
+<TR HEIGHT="1"><TD ALIGN="right" STYLE="padding-bottom:1em;"><SPAN STYLE="float:left; margin-right:2em;" CLASS="if-left-hidden-span"><A HREF="//www.websudoku.com/?level=1" TARGET="_top"><B>Easy</B></A>&nbsp; <A HREF="//www.websudoku.com/?level=2" TARGET="_top"><B>Medium</B></A>&nbsp; <A HREF="//www.websudoku.com/?level=3" TARGET="_top"><B>Hard</B></A>&nbsp; <B>Evil</B> </SPAN><B><A HREF="//www.websudoku.com/?register" TARGET="_top">Sign up<SPAN CLASS="extra-words"> for free</SPAN></A> &ndash; <A HREF="//www.websudoku.com/?signin" TARGET="_top">Log in<SPAN CLASS="extra-words"> to Web Sudoku</SPAN></A></B></TD></TR>
+                        <TR VALIGN="middle"><TD ALIGN="center"width="*" onclick="side_click(null)" style="-webkit-tap-highlight-color: rgba(0,0,0,0);">
+
+                        <FORM NAME="board" METHOD=POST ACTION="./" STYLE="margin:0;">
+
+
+
+                        <P CLASS="bigbig" STYLE="margin-top:1em; margin-bottom:1em;"><SPAN id="message"><B>Here is the puzzle. Good luck!</B></SPAN></P>
+
+<DIV STYLE="position:relative;"><TABLE id="puzzle_grid" CELLSPACING=0 CELLPADDING=0 CLASS=t><TR><TD CLASS=g0 ID=c00><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z11 READONLY onFocus="this.blur(); return false;" VALUE="9" ID=f00></TD><TD CLASS=f0 ID=c10><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z21 READONLY onFocus="this.blur(); return false;" VALUE="6" ID=f10></TD><TD CLASS=f0 ID=c20><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z31 READONLY onClick="side_click('20', event);" onFocus="this.blur(); return false;" ID=f20></TD><TD CLASS=g0 ID=c30><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z41 READONLY onClick="side_click('30', event);" onFocus="this.blur(); return false;" ID=f30></TD><TD CLASS=f0 ID=c40><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z51 READONLY onClick="side_click('40', event);" onFocus="this.blur(); return false;" ID=f40></TD><TD CLASS=f0 ID=c50><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z61 READONLY onClick="side_click('50', event);" onFocus="this.blur(); return false;" ID=f50></TD><TD CLASS=g0 ID=c60><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z71 READONLY onClick="side_click('60', event);" onFocus="this.blur(); return false;" ID=f60></TD><TD CLASS=f0 ID=c70><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z81 READONLY onFocus="this.blur(); return false;" VALUE="3" ID=f70></TD><TD CLASS=f0 ID=c80><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z91 READONLY onClick="side_click('80', event);" onFocus="this.blur(); return false;" ID=f80></TD></TR><TR><TD CLASS=e0 ID=c01><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z12 READONLY onClick="side_click('01', event);" onFocus="this.blur(); return false;" ID=f01></TD><TD CLASS=c0 ID=c11><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z22 READONLY onClick="side_click('11', event);" onFocus="this.blur(); return false;" ID=f11></TD><TD CLASS=c0 ID=c21><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z32 READONLY onFocus="this.blur(); return false;" VALUE="2" ID=f21></TD><TD CLASS=e0 ID=c31><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z42 READONLY onClick="side_click('31', event);" onFocus="this.blur(); return false;" ID=f31></TD><TD CLASS=c0 ID=c41><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z52 READONLY onClick="side_click('41', event);" onFocus="this.blur(); return false;" ID=f41></TD><TD CLASS=c0 ID=c51><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z62 READONLY onFocus="this.blur(); return false;" VALUE="4" ID=f51></TD><TD CLASS=e0 ID=c61><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z72 READONLY onClick="side_click('61', event);" onFocus="this.blur(); return false;" ID=f61></TD><TD CLASS=c0 ID=c71><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z82 READONLY onClick="side_click('71', event);" onFocus="this.blur(); return false;" ID=f71></TD><TD CLASS=c0 ID=c81><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z92 READONLY onFocus="this.blur(); return false;" VALUE="8" ID=f81></TD></TR><TR><TD CLASS=e0 ID=c02><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z13 READONLY onClick="side_click('02', event);" onFocus="this.blur(); return false;" ID=f02></TD><TD CLASS=c0 ID=c12><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z23 READONLY onClick="side_click('12', event);" onFocus="this.blur(); return false;" ID=f12></TD><TD CLASS=c0 ID=c22><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z33 READONLY onFocus="this.blur(); return false;" VALUE="4" ID=f22></TD><TD CLASS=e0 ID=c32><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z43 READONLY onFocus="this.blur(); return false;" VALUE="5" ID=f32></TD><TD CLASS=c0 ID=c42><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z53 READONLY onClick="side_click('42', event);" onFocus="this.blur(); return false;" ID=f42></TD><TD CLASS=c0 ID=c52><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z63 READONLY onClick="side_click('52', event);" onFocus="this.blur(); return false;" ID=f52></TD><TD CLASS=e0 ID=c62><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z73 READONLY onFocus="this.blur(); return false;" VALUE="7" ID=f62></TD><TD CLASS=c0 ID=c72><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z83 READONLY onFocus="this.blur(); return false;" VALUE="2" ID=f72></TD><TD CLASS=c0 ID=c82><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z93 READONLY onClick="side_click('82', event);" onFocus="this.blur(); return false;" ID=f82></TD></TR><TR><TD CLASS=g0 ID=c03><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z14 READONLY onClick="side_click('03', event);" onFocus="this.blur(); return false;" ID=f03></TD><TD CLASS=f0 ID=c13><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z24 READONLY onClick="side_click('13', event);" onFocus="this.blur(); return false;" ID=f13></TD><TD CLASS=f0 ID=c23><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z34 READONLY onClick="side_click('23', event);" onFocus="this.blur(); return false;" ID=f23></TD><TD CLASS=g0 ID=c33><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z44 READONLY onClick="side_click('33', event);" onFocus="this.blur(); return false;" ID=f33></TD><TD CLASS=f0 ID=c43><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z54 READONLY onFocus="this.blur(); return false;" VALUE="1" ID=f43></TD><TD CLASS=f0 ID=c53><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z64 READONLY onClick="side_click('53', event);" onFocus="this.blur(); return false;" ID=f53></TD><TD CLASS=g0 ID=c63><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z74 READONLY onClick="side_click('63', event);" onFocus="this.blur(); return false;" ID=f63></TD><TD CLASS=f0 ID=c73><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z84 READONLY onClick="side_click('73', event);" onFocus="this.blur(); return false;" ID=f73></TD><TD CLASS=f0 ID=c83><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z94 READONLY onClick="side_click('83', event);" onFocus="this.blur(); return false;" ID=f83></TD></TR><TR><TD CLASS=e0 ID=c04><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z15 READONLY onFocus="this.blur(); return false;" VALUE="2" ID=f04></TD><TD CLASS=c0 ID=c14><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z25 READONLY onClick="side_click('14', event);" onFocus="this.blur(); return false;" ID=f14></TD><TD CLASS=c0 ID=c24><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z35 READONLY onClick="side_click('24', event);" onFocus="this.blur(); return false;" ID=f24></TD><TD CLASS=e0 ID=c34><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z45 READONLY onFocus="this.blur(); return false;" VALUE="6" ID=f34></TD><TD CLASS=c0 ID=c44><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z55 READONLY onClick="side_click('44', event);" onFocus="this.blur(); return false;" ID=f44></TD><TD CLASS=c0 ID=c54><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z65 READONLY onFocus="this.blur(); return false;" VALUE="9" ID=f54></TD><TD CLASS=e0 ID=c64><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z75 READONLY onClick="side_click('64', event);" onFocus="this.blur(); return false;" ID=f64></TD><TD CLASS=c0 ID=c74><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z85 READONLY onClick="side_click('74', event);" onFocus="this.blur(); return false;" ID=f74></TD><TD CLASS=c0 ID=c84><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z95 READONLY onFocus="this.blur(); return false;" VALUE="7" ID=f84></TD></TR><TR><TD CLASS=e0 ID=c05><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z16 READONLY onClick="side_click('05', event);" onFocus="this.blur(); return false;" ID=f05></TD><TD CLASS=c0 ID=c15><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z26 READONLY onClick="side_click('15', event);" onFocus="this.blur(); return false;" ID=f15></TD><TD CLASS=c0 ID=c25><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z36 READONLY onClick="side_click('25', event);" onFocus="this.blur(); return false;" ID=f25></TD><TD CLASS=e0 ID=c35><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z46 READONLY onClick="side_click('35', event);" onFocus="this.blur(); return false;" ID=f35></TD><TD CLASS=c0 ID=c45><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z56 READONLY onFocus="this.blur(); return false;" VALUE="4" ID=f45></TD><TD CLASS=c0 ID=c55><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z66 READONLY onClick="side_click('55', event);" onFocus="this.blur(); return false;" ID=f55></TD><TD CLASS=e0 ID=c65><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z76 READONLY onClick="side_click('65', event);" onFocus="this.blur(); return false;" ID=f65></TD><TD CLASS=c0 ID=c75><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z86 READONLY onClick="side_click('75', event);" onFocus="this.blur(); return false;" ID=f75></TD><TD CLASS=c0 ID=c85><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z96 READONLY onClick="side_click('85', event);" onFocus="this.blur(); return false;" ID=f85></TD></TR><TR><TD CLASS=g0 ID=c06><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z17 READONLY onClick="side_click('06', event);" onFocus="this.blur(); return false;" ID=f06></TD><TD CLASS=f0 ID=c16><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z27 READONLY onFocus="this.blur(); return false;" VALUE="9" ID=f16></TD><TD CLASS=f0 ID=c26><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z37 READONLY onFocus="this.blur(); return false;" VALUE="8" ID=f26></TD><TD CLASS=g0 ID=c36><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z47 READONLY onClick="side_click('36', event);" onFocus="this.blur(); return false;" ID=f36></TD><TD CLASS=f0 ID=c46><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z57 READONLY onClick="side_click('46', event);" onFocus="this.blur(); return false;" ID=f46></TD><TD CLASS=f0 ID=c56><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z67 READONLY onFocus="this.blur(); return false;" VALUE="7" ID=f56></TD><TD CLASS=g0 ID=c66><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z77 READONLY onFocus="this.blur(); return false;" VALUE="4" ID=f66></TD><TD CLASS=f0 ID=c76><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z87 READONLY onClick="side_click('76', event);" onFocus="this.blur(); return false;" ID=f76></TD><TD CLASS=f0 ID=c86><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z97 READONLY onClick="side_click('86', event);" onFocus="this.blur(); return false;" ID=f86></TD></TR><TR><TD CLASS=e0 ID=c07><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z18 READONLY onFocus="this.blur(); return false;" VALUE="6" ID=f07></TD><TD CLASS=c0 ID=c17><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z28 READONLY onClick="side_click('17', event);" onFocus="this.blur(); return false;" ID=f17></TD><TD CLASS=c0 ID=c27><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z38 READONLY onClick="side_click('27', event);" onFocus="this.blur(); return false;" ID=f27></TD><TD CLASS=e0 ID=c37><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z48 READONLY onFocus="this.blur(); return false;" VALUE="4" ID=f37></TD><TD CLASS=c0 ID=c47><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z58 READONLY onClick="side_click('47', event);" onFocus="this.blur(); return false;" ID=f47></TD><TD CLASS=c0 ID=c57><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z68 READONLY onClick="side_click('57', event);" onFocus="this.blur(); return false;" ID=f57></TD><TD CLASS=e0 ID=c67><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z78 READONLY onFocus="this.blur(); return false;" VALUE="8" ID=f67></TD><TD CLASS=c0 ID=c77><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z88 READONLY onClick="side_click('77', event);" onFocus="this.blur(); return false;" ID=f77></TD><TD CLASS=c0 ID=c87><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z98 READONLY onClick="side_click('87', event);" onFocus="this.blur(); return false;" ID=f87></TD></TR><TR><TD CLASS=i0 ID=c08><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z19 READONLY onClick="side_click('08', event);" onFocus="this.blur(); return false;" ID=f08></TD><TD CLASS=h0 ID=c18><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z29 READONLY onFocus="this.blur(); return false;" VALUE="3" ID=f18></TD><TD CLASS=h0 ID=c28><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z39 READONLY onClick="side_click('28', event);" onFocus="this.blur(); return false;" ID=f28></TD><TD CLASS=i0 ID=c38><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z49 READONLY onClick="side_click('38', event);" onFocus="this.blur(); return false;" ID=f38></TD><TD CLASS=h0 ID=c48><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z59 READONLY onClick="side_click('48', event);" onFocus="this.blur(); return false;" ID=f48></TD><TD CLASS=h0 ID=c58><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z69 READONLY onClick="side_click('58', event);" onFocus="this.blur(); return false;" ID=f58></TD><TD CLASS=i0 ID=c68><INPUT CLASS=d0 SIZE=2 AUTOCOMPLETE=off NAME=amy2z79 READONLY onClick="side_click('68', event);" onFocus="this.blur(); return false;" ID=f68></TD><TD CLASS=h0 ID=c78><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z89 READONLY onFocus="this.blur(); return false;" VALUE="1" ID=f78></TD><TD CLASS=h0 ID=c88><INPUT CLASS=s0 SIZE=2 AUTOCOMPLETE=off NAME=samy2z99 READONLY onFocus="this.blur(); return false;" VALUE="2" ID=f88></TD></TR></TABLE><DIV ID="side_keys" STYLE="display:none;"><TABLE><TR><TD STYLE="text-align:center; vertical-align:middle;">
+<TABLE STYLE="border-collapse:collapse; margin:0 auto;">
+
+        <TR><TD CLASS="tk c0" STYLE="border-top:#666699 solid 2px;" onClick="side_key('1', event)">
+                <SPAN CLASS="d0">1</SPAN>
+        </TD></TR>
+
+        <TR><TD CLASS="tk c0" onClick="side_key('2', event)">
+                <SPAN CLASS="d0">2</SPAN>
+        </TD></TR>
+
+        <TR><TD CLASS="tk c0" onClick="side_key('3', event)">
+                <SPAN CLASS="d0">3</SPAN>
+        </TD></TR>
+
+        <TR><TD CLASS="tk c0" onClick="side_key('4', event)">
+                <SPAN CLASS="d0">4</SPAN>
+        </TD></TR>
+
+        <TR><TD CLASS="tk c0" onClick="side_key('5', event)">
+                <SPAN CLASS="d0">5</SPAN>
+        </TD></TR>
+
+        <TR><TD CLASS="tk c0" onClick="side_key('6', event)">
+                <SPAN CLASS="d0">6</SPAN>
+        </TD></TR>
+
+        <TR><TD CLASS="tk c0" onClick="side_key('7', event)">
+                <SPAN CLASS="d0">7</SPAN>
+        </TD></TR>
+
+        <TR><TD CLASS="tk c0" onClick="side_key('8', event)">
+                <SPAN CLASS="d0">8</SPAN>
+        </TD></TR>
+
+        <TR><TD CLASS="tk c0" onClick="side_key('9', event)">
+                <SPAN CLASS="d0">9</SPAN>
+        </TD></TR>
+
+        <TR><TD CLASS="tk c0" STYLE="border-bottom:#666699 solid 2px;" onClick="side_key('', event)">
+                <SPAN CLASS="d0">&nbsp;</SPAN>
+        </TD></TR>
+
+</TABLE>
+
+</TD></TR></TABLE></DIV><DIV ID="bottom_keys">
+<TABLE STYLE="border-collapse:collapse; margin:0 auto;"><TR>
+
+        <TD CLASS="tk c0" STYLE="border-left:#666699 solid 2px;" onClick="side_key('1', event)">
+                <SPAN CLASS="d0">1</SPAN>
+        </TD>
+
+        <TD CLASS="tk c0" onClick="side_key('2', event)">
+                <SPAN CLASS="d0">2</SPAN>
+        </TD>
+
+        <TD CLASS="tk c0" onClick="side_key('3', event)">
+                <SPAN CLASS="d0">3</SPAN>
+        </TD>
+
+        <TD CLASS="tk c0" onClick="side_key('4', event)">
+                <SPAN CLASS="d0">4</SPAN>
+        </TD>
+
+        <TD CLASS="tk c0" onClick="side_key('5', event)">
+                <SPAN CLASS="d0">5</SPAN>
+        </TD>
+
+        <TD CLASS="tk c0" onClick="side_key('6', event)">
+                <SPAN CLASS="d0">6</SPAN>
+        </TD>
+
+        <TD CLASS="tk c0" onClick="side_key('7', event)">
+                <SPAN CLASS="d0">7</SPAN>
+        </TD>
+
+        <TD CLASS="tk c0" onClick="side_key('8', event)">
+                <SPAN CLASS="d0">8</SPAN>
+        </TD>
+
+        <TD CLASS="tk c0" onClick="side_key('9', event)">
+                <SPAN CLASS="d0">9</SPAN>
+        </TD>
+
+        <TD CLASS="tk c0" STYLE="border-right:#666699 solid 2px;" onClick="side_key('', event)">
+                <SPAN CLASS="d0">&nbsp;</SPAN>
+        </TD>
+
+</TR></TABLE>
+
+</DIV></DIV>
+                                <INPUT NAME=prefix ID="prefix" TYPE=hidden VALUE="amy2z">
+                                <INPUT NAME=start TYPE=hidden VALUE="1783882763">
+                                <INPUT NAME=inchallenge TYPE=hidden VALUE="">
+                                <INPUT NAME=level TYPE=hidden VALUE="4">
+                                <INPUT NAME=id ID="pid" TYPE=hidden VALUE="3333333333">
+                                <INPUT NAME=cheat ID="cheat" TYPE=hidden VALUE="965278134172934658384561729749315286213689547856742391598127463621493875437856912">
+                                <INPUT ID="editmask" TYPE=hidden VALUE="001111101110110110110011001111101111011010110111101111100110011011011011101111100">
+                                <INPUT NAME=options TYPE=hidden VALUE="4">
+                                <INPUT NAME=errors TYPE=hidden VALUE="0" ID="errors">
+                                <INPUT NAME=layout TYPE=hidden VALUE="">
+                        <P STYLE="margin-top:1.5em; margin-bottom:0;"><INPUT NAME="jstimer" ID="jstimer" TYPE="hidden">
+
+<FONT CLASS="halfbig">Evil Puzzle 3,333,333,333
+                        -<SPAN ID="timer"></SPAN>- <A HREF="//www.websudoku.com/?select=1&level=4" TARGET="_top">Select a puzzle...</A></FONT>                            </P>
+                                <P STYLE="margin-top:1em;" CLASS="ios-shrink-narrow">
+                                        <INPUT NAME=submit TYPE=submit CLASS=bs VALUE="How am I doing?" onClick="j12(); return j1();"><INPUT NAME=pause TYPE=submit CLASS=bs VALUE="Pause" onClick="return j12();"><INPUT NAME=printopts TYPE=submit CLASS=bs VALUE="Print" onClick="return j12();"><INPUT NAME=clear TYPE=submit CLASS="bs" VALUE="Clear" onClick="j7(2); return false;"><INPUT NAME=showopts TYPE=submit CLASS=bs VALUE="Options" onClick="return j12();">
+                                </P>
+
+                                <INPUT NAME="jscheat" ID="jscheat" TYPE="hidden">
+
+                                                        <DIV ID="c_div" CLASS="halfbig" STYLE="display:none; text-align:left; z-index:999; width:24em; height:6em; border-radius:8px; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; position:fixed; top:50%; left:50%; margin-left:-12em; margin-top:-3em; background:white;">
+                                        <P ID="c_text" STYLE="margin:0.75em; font-weight:bold;"></P>
+                                        <DIV STYLE="margin:0.75em; position:absolute; bottom:0; right:0;">
+                                                <INPUT TYPE="submit" STYLE="width:5em;" onClick="j13(); return false;" VALUE="Cancel">
+                                                <INPUT ID="c_ok" TYPE="submit" STYLE="width:5em;" VALUE="OK">
+                                        </DIV>
+                                </DIV>
+</FORM>
+                        </TD></TR>
+                        <TR HEIGHT="1" CLASS="if-left-hidden-row"><TD ALIGN="center" STYLE="padding-top:1em;">
+                                <A HREF="//www.websudoku.com/about.php" TARGET="_top" TITLE="More information about Web Sudoku">About</A> &ndash; <A HREF="//www.websudoku.com/faqs.php" TARGET="_top" TITLE="Frequently Asked Questions">FAQs</A> &ndash; <A HREF="//www.websudoku.com/syndication.php" TARGET="_top" TITLE="Sudoku puzzle syndication">Syndication</A> &ndash; <A HREF="//www.websudoku.com/privacy.php" TARGET="_top" TITLE="Our full privacy statement">Privacy</A> &ndash; <A HREF="//www.websudoku.com/feedback.php" TARGET="_top" TITLE="Send feedback to Web Sudoku">Feedback</A>                       </TD></TR>
+                </TABLE></TD>
+
+        </TR></TABLE>
+        </BODY>
+</HTML>

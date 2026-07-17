@@ -1,4 +1,7 @@
 scripting.py
+temp.py
+generator.py
+websudoku.py
 output.txt
 hosted/
 __pycache__/
