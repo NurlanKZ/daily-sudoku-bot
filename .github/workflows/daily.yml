@@ -43,4 +43,4 @@ jobs:
     - name: Run Python script with debug output
       run: |
         set -x
-        python sudoku.py
+        python sudoku-bot.py
